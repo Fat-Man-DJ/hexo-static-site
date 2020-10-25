@@ -96,10 +96,9 @@ baidu_url_submit:
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
 
 admin:
-    username: FatManDJ
-    password_hash: 200237ml
-    secret: hey hexo
-    deployCommand: 'hexo generate'
+  username: admin
+  password_hash: $2a$10$ow6yuGMAfiFd/d1BHU/9Uu7uLoIa6E33L67plS8ppR0HwdgbXyFqG
+  secret: nothing
 
 feed:
     type: atom
