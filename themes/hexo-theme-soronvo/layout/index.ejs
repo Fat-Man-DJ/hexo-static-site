@@ -16,14 +16,25 @@
           <div class="post-meta">
             <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
           </div>
-
+          <% if (post.tags && post.tags.length){ %>
+            <%- list_tags(post.tags, {
+              show_count: false,
+              class: 'label secondary tags'
+            }) %>
+          <% } %>
+          <br>
+          <br>
           <%- post.excerpt %>
           <h5><a class="post-title-link" href="<%- url_for(post.path) %>">Read More>></a></h5>
 
         </article>
       <% }) %>
   </div>
+
+
+
 </div>
+<%- include("_other/footer.ejs") %>
 
 </body>
 </html>

@@ -1,9 +1,35 @@
 <%- include("_other/page_1.ejs") %>
 <h3><%- page.title %></h3>
-<section class="tag">
-  <%- list_tags(site.tags,{
-              show_count: true,
+<% if (site.tags && site.tags.length){ %>
+  <%- list_tags(site.tags, {
+    show_count: false,
+    class: 'label secondary'
   }) %>
-</section>
-<title><%- config.title %> - <%- page.title %></title>
+<% } %>
 <%- include("_other/page_2.ejs") %>
+<html>
+  <%- include("_other/head.ejs") %>
+<body>
+
+<div class="row">
+  <%- include("_other/sidebar.ejs") %>
+  <div class="medium-8 columns">
+    <br>
+    <center>
+      <h1><%- config.title %></h1>
+      <h3><%- page.title %></h3>
+      <% if (site.tags && site.tags.length){ %>
+        <%- list_tags(site.tags, {
+          show_count: false,
+          class: 'label secondary tags'
+        }) %>
+      <% } %>
+  </div>
+
+
+
+</div>
+<%- include("_other/footer.ejs") %>
+
+</body>
+</html>

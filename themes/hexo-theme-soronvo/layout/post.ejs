@@ -8,7 +8,7 @@
   <div class="medium-8 columns">
 
     <br>
-    <h3><%- page.title %></h3>
+    <h1><%- page.title %></h1>
     <font color="grey" size=2><%- date(page.date, "YYYY-MM-DD") %></font>
     <title><%- config.title %> - <%- page.title %></title>
     <%- page.content %>
@@ -18,6 +18,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
   </div>
 </div>
-
+<br>
+<%- include("_other/footer.ejs") %>
 </body>
 </html>
