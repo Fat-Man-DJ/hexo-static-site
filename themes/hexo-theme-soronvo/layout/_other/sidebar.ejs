@@ -1,0 +1,40 @@
+<div class="medium-4 columns" style="background-color:#f1f1f1;">
+
+  <ul class="side-nav">
+
+    <% for (name in theme.menu) { %>
+      <li class="nav-item active">
+          <a class="active" href="<%- url_for(theme.menu[name]) %>"><%= name %></a>
+      </li>
+    <% } %>
+
+  </ul>
+  <hr>
+  <p>关于我</p>
+  <p>
+    FatManDJ,一个小学生
+    <br>
+    刚刚参加了一个竞赛
+    <br>
+    你可以在以下地方找到我：
+    <p>
+      <a href="https://github.com/Fat-Man-DJ">GitHub</a>,
+      <a href="https://space.Bilibili.com/452478240">BiliBili</a>
+    </p>
+    <hr>
+  <p>
+    关于主题
+  </p>
+
+  <p>
+    Soronvo主题 For Hexo
+    <br>
+    泛用性比较差
+    <br>
+    用的是Foundation
+    <br>
+    (也就我用)
+    <br>
+    (C) 2020 FatManDJ 无备案
+  </p>
+</div>

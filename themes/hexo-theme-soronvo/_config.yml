@@ -1,0 +1,16 @@
+menu:
+  Home: /
+  About: /about/
+  Log Of Site: /pozhanriji/
+
+
+subscribe:
+  RSS Feed: /atom.xml
+  Bilibili: https://space.bilibili.com/452478240
+
+epedemic_data: false
+
+#code highlight
+#need change "highlight" option in root's _config.yml
+
+highlight_theme: vs2015

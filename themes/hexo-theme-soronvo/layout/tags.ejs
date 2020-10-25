@@ -1,0 +1,9 @@
+<%- include("_other/page_1.ejs") %>
+<h3><%- page.title %></h3>
+<section class="tag">
+  <%- list_tags(site.tags,{
+              show_count: true,
+  }) %>
+</section>
+<title><%- config.title %> - <%- page.title %></title>
+<%- include("_other/page_2.ejs") %>

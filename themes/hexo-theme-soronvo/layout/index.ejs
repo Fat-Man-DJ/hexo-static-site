@@ -1,0 +1,29 @@
+<html>
+  <%- include("_other/head.ejs") %>
+<body>
+
+<div class="row">
+  <%- include("_other/sidebar.ejs") %>
+  <div class="medium-8 columns">
+    <br>
+    <center>
+      <h1><%- config.title %></h1>
+      <% page.posts.each(function (post) { %>
+        <article class="post">
+          <div class="post-title">
+            <h3><a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+          </div>
+          <div class="post-meta">
+            <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
+          </div>
+
+          <%- post.excerpt %>
+          <h5><a class="post-title-link" href="<%- url_for(post.path) %>">Read More>></a></h5>
+
+        </article>
+      <% }) %>
+  </div>
+</div>
+
+</body>
+</html>
