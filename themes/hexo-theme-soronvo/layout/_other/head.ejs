@@ -18,9 +18,30 @@
       margin-top: -60px;/*等于footer的高度*/
       height: 60px;
   }
-  .mobile-menu {
+  .mobile-menu,.mobile-text {
     display: none
   }
+  .post,.aside{
+      transition-duration: 0.5s; //停留时间显示
+  }
+  .post:hover,.aside:hover{
+      -webkit-box-shadow: #ccc 0px 10px 10px;
+      -moz-box-shadow: #ccc 0px 10px 10px;
+      box-shadow: #ccc 0px 10px 10px;
+      background-color: #f1f1f1;
+      border:0px solid;
+      border-radius:25px;
+
+  }
+  .post-title-link {
+    transition-duration: 0.5s
+  }
+  .post-title-link:hover {
+    color: #222
+  }
+
+
+
   @media screen and (max-width: 800px) {
     .aside {
       display: none
@@ -28,9 +49,8 @@
     #footer {
       content: "This is Is A Page For Mobile Phoen"
     }
-    .mobile-menu {
+    .mobile-menu,.mobile-text {
       display: inline-block
-    }
 
   </style>
 </head>

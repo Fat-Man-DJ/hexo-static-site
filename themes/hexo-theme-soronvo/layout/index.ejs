@@ -4,7 +4,7 @@
 
 <div class="row">
   <%- include("_other/sidebar.ejs") %>
-  <div class="medium-8 columns">
+  <div class="medium-8 columns index">
     <br>
     <center>
       <h1><%- config.title %></h1>
@@ -29,8 +29,19 @@
           <h5><a class="post-title-link" href="<%- url_for(post.path) %>">Read More>></a></h5>
 
         </article>
+
       <% }) %>
+      <br>
+      <div class="nav">
+      <% if (page.posts.total > 5){ %>
+          <%- paginator({
+            prev_text: "<Prev",
+            next_text: "Next>"
+          }) %>
+      <% } %>
+    </div>
   </div>
+
 
 
 
