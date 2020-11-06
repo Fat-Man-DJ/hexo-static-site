@@ -5,52 +5,81 @@
   <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+  <script color="0,0,0" opacity="0.8" zIndex="-1" count="199" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
   <script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
   <style>
-  #footer {
-      background-color: #f1f1f1
-  }
-  .sidebar{
-      background-color: #f1f1f1
-  }
-  .tags {
-      background-color: #f1f1f1
-      margin-top: -60px;/*等于footer的高度*/
-      height: 60px;
-  }
-  .mobile-menu,.mobile-text {
-    display: none
-  }
-  .post,.aside{
-      transition-duration: 0.5s; //停留时间显示
-  }
-  .post:hover,.aside:hover{
-      -webkit-box-shadow: #ccc 0px 10px 10px;
-      -moz-box-shadow: #ccc 0px 10px 10px;
-      box-shadow: #ccc 0px 10px 10px;
-      background-color: #f1f1f1;
-      border:0px solid;
-      border-radius:25px;
-
-  }
-  .post-title-link {
-    transition-duration: 0.5s
-  }
-  .post-title-link:hover {
-    color: #222
-  }
-
-
-
-  @media screen and (max-width: 800px) {
-    .aside {
-      display: none
-    }
     #footer {
-      content: "This is Is A Page For Mobile Phoen"
+        background-color: #ffffff
+    }
+    body {
+      background-color: #f1f1f1
+    }
+    .sidebar{
+        background-color: white
+    }
+    .tags {
+        background-color: #f1f1f1
+        margin-top: -60px;/*等于footer的高度*/
+        height: 60px;
     }
     .mobile-menu,.mobile-text {
-      display: inline-block
+      display: none
+    }
+    .post,.aside{
+      box-shadow: #ccc 0px 10px 10px;
+      background-color: white;
+      transition-duration: 0.5s; //停留时间显示
+
+    }
+    .post:hover,.aside:hover{
+        -webkit-box-shadow: #ccc 0px 10px 10px;
+        -moz-box-shadow: #ccc 0px 10px 10px;
+        box-shadow: #ccc 0px 10px 10px;
+        background-color: white;
+        border:0px solid;
+        border-radius:25px;
+
+    }
+    .post-title-link {
+      transition-duration: 0.5s
+    }
+    .post-title-link:hover {
+      color: #222
+    }
+
+
+
+    @media screen and (max-width: 800px) {
+      .aside {
+        display: none
+      }
+      #footer {
+        content: "This is Is A Page For Mobile Phoen"
+      }
+      .mobile-menu,.mobile-text {
+        display: inline-block
+        @media (prefers-color-scheme:light){
+          /* 当系统是使用浅色模式 */
+          body{
+              background-color: #fff;
+              color: #000;
+          }
+      }
+      @media (prefers-color-scheme:dark){
+          /* 当系统是使用深色模式 */
+          body{
+              background-color: #000;
+              color: #fff;
+          }
+      }
+      @media (prefers-color-scheme:no-preference){
+          body{
+              background-color: #fff;
+              color: #000;
+          }
+      }
+
 
   </style>
+
 </head>

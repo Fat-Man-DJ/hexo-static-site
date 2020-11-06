@@ -1,0 +1,68 @@
+#footer {
+    background-color: #ffffff
+}
+body {
+  background-color: #f1f1f1
+}
+.sidebar{
+    background-color: white
+}
+.tags {
+    background-color: #f1f1f1
+    margin-top: -60px;/*等于footer的高度*/
+    height: 60px;
+}
+.mobile-menu,.mobile-text {
+  display: none
+}
+.post,.aside{
+    transition-duration: 0.5s; //停留时间显示
+    background-color: white
+}
+.post:hover,.aside:hover{
+    -webkit-box-shadow: #ccc 0px 10px 10px;
+    -moz-box-shadow: #ccc 0px 10px 10px;
+    box-shadow: #ccc 0px 10px 10px;
+    background-color: #f1f1f1;
+    border:0px solid;
+    border-radius:25px;
+
+}
+.post-title-link {
+  transition-duration: 0.5s
+}
+.post-title-link:hover {
+  color: #222
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .aside {
+    display: none
+  }
+  #footer {
+    content: "This is Is A Page For Mobile Phoen"
+  }
+  .mobile-menu,.mobile-text {
+    display: inline-block
+    @media (prefers-color-scheme:light){
+      /* 当系统是使用浅色模式 */
+      body{
+          background-color: #fff;
+          color: #000;
+      }
+  }
+  @media (prefers-color-scheme:dark){
+      /* 当系统是使用深色模式 */
+      body{
+          background-color: #000;
+          color: #fff;
+      }
+  }
+  @media (prefers-color-scheme:no-preference){
+      body{
+          background-color: #fff;
+          color: #000;
+      }
+  }
